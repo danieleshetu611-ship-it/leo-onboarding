@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="am">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leo Promotions | Onboarding Form</title>
+    <style>
+        :root { --brand: #004e92; --accent: #fdbb2d; --bg: #f8fbff; --text: #333; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--bg); margin: 0; padding: 20px; color: var(--text); line-height: 1.6; }
+        .container { max-width: 850px; margin: auto; background: white; padding: 40px; border-radius: 15px; border-top: 15px solid var(--brand); box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
+        .header { text-align: center; border-bottom: 2px solid #eee; margin-bottom: 30px; padding-bottom: 20px; }
+        h1 { color: var(--brand); margin: 0; font-size: 2.2em; text-transform: uppercase; letter-spacing: 1px; }
+        h3 { background: #eef2f7; padding: 12px; color: var(--brand); border-left: 6px solid var(--accent); margin-top: 30px; border-radius: 4px; font-size: 1.1em; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        label { display: block; font-weight: bold; margin-bottom: 5px; margin-top: 10px; font-size: 0.85em; }
+        input, textarea, select { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px; box-sizing: border-box; font-size: 0.95em; transition: 0.3s; }
+        input:focus, textarea:focus { border-color: var(--brand); outline: none; box-shadow: 0 0 8px rgba(0,78,146,0.1); }
+        .services-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; background: #fdfdfd; padding: 15px; border: 1px solid #eee; border-radius: 8px; }
+        .checkbox-item { display: flex; align-items: center; font-size: 0.9em; cursor: pointer; padding: 5px; }
+        .checkbox-item input { width: 18px; height: 18px; margin-right: 12px; cursor: pointer; }
+        .footer-note { background: #fff8e1; padding: 25px; border-radius: 10px; border: 1px solid #ffe082; margin-top: 35px; }
+        .submit-btn { background: linear-gradient(135deg, var(--brand), #003366); color: white; padding: 20px; width: 100%; border: none; border-radius: 10px; font-size: 1.4em; font-weight: bold; cursor: pointer; margin-top: 30px; transition: 0.4s; letter-spacing: 2px; }
+        .submit-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); opacity: 0.95; }
+        @media (max-width: 600px) { .grid, .services-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>LEO PROMOTIONS</h1>
+        <p>Leo Trading PLC - Client Onboarding & Discovery Form</p>
+    </div>
+
+    <form id="leoForm" action="https://script.google.com/macros/s/AKfycby0-dShhYbLb40TUB7zqQBVVNVp4_SQkFWZHoQwblg6lWCTzmEooay2XbhZCWXQ-8o5wA/exec" method="POST">
+        
+        <h3>1. Client Information</h3>
+        <div class="grid">
+            <div><label>Company Name</label><input type="text" name="company" required></div>
+            <div><label>Contact Person</label><input type="text" name="contact" required></div>
+            <div><label>Position/Title</label><input type="text" name="position"></div>
+            <div><label>Email Address</label><input type="email" name="email" required></div>
+            <div><label>Phone Number</label><input type="tel" name="phone"></div>
+            <div><label>Website</label><input type="text" name="website"></div>
+        </div>
+        <label>Social Media Handles (IG, FB, TikTok, etc.)</label>
+        <textarea name="social" rows="2" placeholder="e.g. @leopromotions_ethio"></textarea>
+
+        <h3>2. Business Overview</h3>
+        <div class="grid">
+            <div><label>Industry/Sector</label><input type="text" name="industry"></div>
+            <div><label>Location(s)</label><input type="text" name="location"></div>
+        </div>
+        <label>Brief Description of Your Business</label>
+        <textarea name="desc" rows="3"></textarea>
+
+        <h3>3. Objectives & Goals</h3>
+        <label>Primary Marketing Objectives</label>
+        <textarea name="objectives" rows="2" placeholder="e.g. Increase sales, brand awareness"></textarea>
+        <label>Target Audience</label>
+        <input type="text" name="audience" placeholder="Age, Gender, Interests">
+
+        <h3>4. Services Required</h3>
+        <div class="services-grid">
+            <label class="checkbox-item"><input type="checkbox" name="services" value="SMM"> Social Media Management</label>
+            <label class="checkbox-item"><input type="checkbox" name="services" value="Content"> Content Creation</label>
+            <label class="checkbox-item"><input type="checkbox" name="services" value="Ads"> Digital Advertising</label>
+            <label class="checkbox-item"><input type="checkbox" name="services" value="TV"> TV Commercials</label>
+            <label class="checkbox-item"><input type="checkbox" name="services" value="Events"> Event Promotions</label>
+            <label class="checkbox-item"><input type="checkbox" name="services" value="Influencer"> Influencer Marketing</label>
+            <label class="checkbox-item"><input type="checkbox" name="services" value="Strategy"> Campaign Strategy</label>
+            <label class="checkbox-item"><input type="checkbox" name="services" value="PR"> Public Relations (PR)</label>
+        </div>
+
+        <h3>5. Budget and Timeline</h3>
+        <div class="grid">
+            <div><label>Monthly Budget (ETB)</label><input type="text" name="budget"></div>
+            <div><label>Preferred Start Date</label><input type="date" name="start"></div>
+        </div>
+        <label>Project Duration</label>
+        <input type="text" name="duration" placeholder="e.g. 6 Months, Ongoing">
+
+        <h3>6. Branding & Content Preferences</h3>
+        <div class="grid">
+            <div><label>Key Messages/Slogans</label><input type="text" name="messages"></div>
+            <div><label>Competitors Admired</label><input type="text" name="competitors"></div>
+        </div>
+        <label>Specific Content Preferences</label>
+        <textarea name="content_pref" rows="2" placeholder="Videos, Photos, Reels, etc."></textarea>
+
+        <h3>7. Additional Information</h3>
+        <label>How did you hear about Leo Promotions?</label>
+        <input type="text" name="referral">
+        <label>Any Specific Challenges or Concerns?</label>
+        <textarea name="challenges" rows="2"></textarea>
+
+        <div class="footer-note">
+            <h3>8. Agreement and Next Steps</h3>
+            <p>I acknowledge that <strong>Leo Trading PLC</strong> will use this information to create a tailored proposal.</p>
+            <div class="grid">
+                <div><label>Digital Signature (Full Name)</label><input type="text" name="signature" required></div>
+                <div><label>Date</label><input type="date" name="date"></div>
+            </div>
+        </div>
+
+        <button type="submit" class="submit-btn" id="s-btn">SUBMIT</button>
+    </form>
+</div>
+
+<script>
+    document.getElementById('leoForm').onsubmit = function() {
+        const btn = document.getElementById('s-btn');
+        btn.innerHTML = "SENDING...";
+        btn.disabled = true;
+        btn.style.background = "#002d5a";
+    };
+</script>
+
+</body>
+</html>
